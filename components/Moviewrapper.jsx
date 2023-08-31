@@ -15,7 +15,7 @@ function Moviewrapper({btn1,btn2}) {
     setButtonActive(false)
   }
   return (
-    <div className='mt-[4vw]'>
+    <div className='mt-[4vw] wrapper'>
       <div className='flex gap-4 items-center ml-4 md:ml-0'>
         <h1 className='font-semibold text-xl'>Trending</h1>
         <div className='  border border-black  rounded-[100px]  space-x-4'>

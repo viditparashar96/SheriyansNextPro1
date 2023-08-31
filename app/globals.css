@@ -27,7 +27,11 @@ background-image: url("https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_fil
   background-repeat: no-repeat;
   background-image: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg");
 }
-
+.wrapper{
+  -webkit-box-shadow: inset -52px -2px 38px -9px rgb(247, 247, 247);
+-moz-box-shadow: inset -52px -2px 38px -9px rgb(247, 247, 247);
+box-shadow: inset -52px -2px 38px -9px rgb(249, 249, 249);
+}
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
