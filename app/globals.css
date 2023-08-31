@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.movieslink{
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.movies:hover .movieslink{
+  display: flex;
+}
+.tvshowslink{
+  display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tvshows:hover .tvshowslink{
+  display: flex;
+}
+.banner{
+background-image: url("https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/tt79dbOPd9Z9ykEOpvckttgYXwH.jpg");
+}
+.image{
+  /* background-image: url("https://www.themoviedb.org/t/p/w220_and_h330_face/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg"); */
+}
+.moviewrapper{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg");
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(227, 223, 223, 0.635); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c9c8c8b3; 
 }
