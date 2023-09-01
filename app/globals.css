@@ -35,7 +35,7 @@ box-shadow: inset -52px -2px 38px -9px rgb(249, 249, 249);
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
-  
+  height: 8px;
 }
 
 
@@ -55,4 +55,30 @@ box-shadow: inset -52px -2px 38px -9px rgb(249, 249, 249);
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #c9c8c8b3; 
+}
+
+
+
+#castcomp::-webkit-scrollbar {
+  
+  height: 9px;
+}
+
+
+
+/* Track */
+#castcomp::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+  
+}
+ 
+/* Handle */
+#castcomp::-webkit-scrollbar-thumb {
+  background: #DBDBDB; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#castcomp::-webkit-scrollbar-thumb:hover {
+  background: #DBDBDB; 
 }
