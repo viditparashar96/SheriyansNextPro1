@@ -4,6 +4,7 @@ import React from 'react'
 import Cast from '@/components/cast'
 import Castcard from '@/components/Castcard'
 function page() {
+  
   return (
     <div>
         <Navbar/>
