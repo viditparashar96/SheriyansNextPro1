@@ -13,7 +13,7 @@ function Moviewrapper({ btn1, btn2 }) {
   const [apiTodayData, setApiTodayData] = useState([])
   const [apiWeekData, setApiWeekData] = useState([])
 
-  console.log(apiTodayData)
+  // console.log(apiTodayData)
   // console.log(apiWeekData)
   function handleClick() {
     setButtonActive2(false)
@@ -40,7 +40,7 @@ function Moviewrapper({ btn1, btn2 }) {
     const response = await axios.get("https://api.themoviedb.org/3/trending/all/week?api_key=8fa1d7ebd4f44371dfeba46c72f4153a")
     // setApiWeekData(response)
     setApiWeekData(response.data.results)
-    console.log(apiWeekData)
+    // console.log(apiWeekData)
 
   }
   useEffect(() => {
@@ -61,17 +61,39 @@ function Moviewrapper({ btn1, btn2 }) {
             (<div className='flex'>
               {
                 apiTodayData.map((data) => {
-                  return <Link href={`/movie/${data.id}`} key={data.id}> <Card key={data.id} {...data}  /></Link>
+                  if (data.name) {
+                    return (
+                      <Link href={`/tv/${data.id}`} key={data.id}>
+                        <Card key={data.id} {...data} />
+                      </Link>
+                    );
+                  } else {
+                    return (
+                      <Link href={`/movie/${data.id}`} key={data.id}>
+                        <Card key={data.id} {...data} />
+                      </Link>
+                    );
+                  }
                 })
               }
             </div>)
             :
             (<div className='flex'>
               {
-
-
                 apiWeekData.map((data) => {
-                  return <Link href={`/movie/${data.id}`} key={data.id}> <Card key={data.id} {...data}  /></Link>
+                  if (data.name) {
+                    return (
+                      <Link href={`/tv/${data.id}`} key={data.id}>
+                        <Card key={data.id} {...data} />
+                      </Link>
+                    );
+                  } else {
+                    return (
+                      <Link href={`/movie/${data.id}`} key={data.id}>
+                        <Card key={data.id} {...data} />
+                      </Link>
+                    );
+                  }
                 })
               }
             </div>)

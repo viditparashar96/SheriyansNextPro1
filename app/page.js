@@ -2,9 +2,12 @@
 import Banner from '@/components/Banner'
 import Moviewrapper from '@/components/Moviewrapper'
 import Navbar from '@/components/Navbar'
-import React from 'react'
+import { User } from '@/utils/Usercontext'
+import React, { useContext } from 'react'
 
 function page() {
+  const {isLoggedIn,setIsLoggedIn}=useContext(User)
+  console.log(isLoggedIn)
   return (
     <div>
       <Navbar/>

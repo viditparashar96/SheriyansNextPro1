@@ -20,7 +20,7 @@ function Showhero({showDets}) {
             </div>
             <div className='right w-[70%]  h-full'>
                 <div className='mt-[3vw]'>
-                <h1 className='inline  text-3xl font-bold'>{showDets.original_title}</h1>
+                <h1 className='inline  text-3xl font-bold'>{showDets.name}</h1>
                 <span className='ml-2'>(2023)</span>
                 </div>
                 <div className='flex items-center space-x-3 text-sm mt-1'>

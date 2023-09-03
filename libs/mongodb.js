@@ -2,7 +2,7 @@ import mongoose, { connection } from "mongoose";
 
 export const connect =async ()=>{
     try {
-        mongoose.connect("mongodb://127.0.0.1:27017/tmdb")
+        mongoose.connect(process.env.MONGO_URL)
         const connection = mongoose.connection
 
         connection.on("connected", () => {
