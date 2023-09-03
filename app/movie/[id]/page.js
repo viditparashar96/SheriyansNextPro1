@@ -6,6 +6,8 @@ import Cast from '@/components/cast'
 import axios from 'axios'
 function page({params}) {
     const [showDets,setShowDets]=useState({})
+    console.log("movie page is here")
+
         console.log(showDets)
     async function fecthshowdets(){
         const res=await axios.get(`https://api.themoviedb.org/3/movie/${params.id}?api_key=8fa1d7ebd4f44371dfeba46c72f4153a`)
@@ -18,7 +20,8 @@ function page({params}) {
   return (
     <div>
         <Navbar/>
-        <Showhero showDets={showDets}/>
+        {/* Showhero is for movie */}
+        <Showhero showDets={showDets}/> 
         <Cast/>
         </div>
   )

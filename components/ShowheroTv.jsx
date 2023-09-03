@@ -1,12 +1,8 @@
 import React from 'react'
 import {AiOutlineMenu,AiFillHeart,AiFillStar} from 'react-icons/ai'
 import {BsFillBookmarkFill,BsFillPlayFill} from 'react-icons/bs'
-function Showhero({showDets}) {
-    var totalMinutes=showDets.runtime
-    
-        const hours = Math.floor(totalMinutes / 60);
-        const minutes = totalMinutes % 60;
-
+function ShowheroTv({showDets}) {
+  
      
   return (
     <div className=' relative w-full h-[550px] bg-cover bg-center   overflow-hidden text-white'>
@@ -20,19 +16,19 @@ function Showhero({showDets}) {
             </div>
             <div className='right w-[70%]  h-full'>
                 <div className='mt-[3vw]'>
-                <h1 className='inline  text-3xl font-bold'>{showDets.title}</h1>
+                <h1 className='inline  text-3xl font-bold'>{showDets.name}</h1>
                 <span className='ml-2'>(2023)</span>
                 </div>
                 <div className='flex items-center space-x-3 text-sm mt-1'>
                     <div className='px-2 border border-white'>
                         <h1>PG-13</h1>
                     </div>
-                    <h1>06/30/2023</h1>
+                    <h1>{showDets.first_air_date}</h1>
                     <h1>US</h1>
                     <div className='w-[4px] h-[4px] rounded-[100px] bg-black'></div>
                     <h1>asdasd</h1>
                     <div className='w-[4px] h-[4px] rounded-[100px] bg-black'></div>
-                    <h1>{`${hours}h ${minutes}m`}</h1>
+                   
                 </div>
                 <div className='mt-4 flex space-x-3 items-center'>
                     <div className='flex items-center space-x-3 font-bold'>
@@ -103,4 +99,4 @@ function Showhero({showDets}) {
   )
 }
 
-export default Showhero
+export default ShowheroTv
