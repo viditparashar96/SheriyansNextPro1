@@ -2,6 +2,14 @@ import React from 'react'
 import {AiOutlineMenu,AiFillHeart,AiFillStar} from 'react-icons/ai'
 import {BsFillBookmarkFill,BsFillPlayFill} from 'react-icons/bs'
 function Showhero({showDets}) {
+   if(!showDets){
+    console.log("data is empty")
+        return <div>Loading............................................</div>
+   }
+   else{
+        console.log("data is here")
+        console.log(showDets)
+  
     var totalMinutes=showDets.runtime
     
         const hours = Math.floor(totalMinutes / 60);
@@ -101,6 +109,7 @@ function Showhero({showDets}) {
         
         </div>
   )
+}
 }
 
 export default Showhero
