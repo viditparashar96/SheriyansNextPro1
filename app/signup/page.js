@@ -34,11 +34,11 @@ function signup() {
         })
         
     
-        console.log(formData)
+        // console.log(formData)
         try {
             
             const res= await axios.post("/api/signup",formData)
-            console.log(res.data)
+            // console.log(res.data)
             if(res.data.succes){
                 router.push("/login")
             }

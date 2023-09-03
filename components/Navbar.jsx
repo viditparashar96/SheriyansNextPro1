@@ -14,7 +14,7 @@ function Navbar() {
     const { isLoggedIn, setIsLoggedIn } = useContext(User)
     const handleLogout= async()=>{
         const res=await axios.get("/api/logout")
-        console.log(res.data)
+        // console.log(res.data)
         setIsLoggedIn(false)
         router.push("/login")
     }

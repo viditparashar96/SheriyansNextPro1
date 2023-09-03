@@ -2,10 +2,10 @@ import React from 'react'
 import {AiOutlineMenu,AiFillHeart,AiFillStar} from 'react-icons/ai'
 import {BsFillBookmarkFill,BsFillPlayFill} from 'react-icons/bs'
 function Showhero({showDets}) {
-    var totalMinutes=showDets.runtime
+    // var totalMinutes=showDets.runtime
     
-        const hours = Math.floor(totalMinutes / 60);
-        const minutes = totalMinutes % 60;
+    //     const hours = Math.floor(totalMinutes / 60);
+    //     const minutes = totalMinutes % 60;
 
      
   return (
@@ -32,7 +32,7 @@ function Showhero({showDets}) {
                     <div className='w-[4px] h-[4px] rounded-[100px] bg-black'></div>
                     <h1>asdasd</h1>
                     <div className='w-[4px] h-[4px] rounded-[100px] bg-black'></div>
-                    <h1>{`${hours}h ${minutes}m`}</h1>
+                    {/* <h1>{`${hours}h ${minutes}m`}</h1> */}
                 </div>
                 <div className='mt-4 flex space-x-3 items-center'>
                     <div className='flex items-center space-x-3 font-bold'>
