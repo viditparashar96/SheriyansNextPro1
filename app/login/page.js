@@ -46,6 +46,9 @@ function login() {
       if (res.data.success) {
         setIsLoggedIn(true)
         router.push("/")
+        if(isLoggedIn){
+          window.location.href="/"
+        }
         
       }
     } catch (error) {
