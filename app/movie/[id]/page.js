@@ -20,7 +20,7 @@ function page({params}) {
         fecthshowdets()
     },[])
   return (
-    <div>
+    <div className=' overflow-x-hidden'>
         <Navbar/>
         {/* Showhero is for movie */}
         {

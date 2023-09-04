@@ -9,7 +9,7 @@ function page() {
   const {isLoggedIn,setIsLoggedIn}=useContext(User)
   console.log(isLoggedIn)
   return (
-    <div>
+    <div className='  overflow-x-hidden'>
       <Navbar/>
       <div className='md:w-8/12  w-full md:mx-auto mx-0'>
       <Banner/>
