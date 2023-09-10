@@ -5,12 +5,14 @@ import Moviewrapper from '@/components/Moviewrapper'
 import Navbar from '@/components/Navbar'
 import { User } from '@/utils/Usercontext'
 import React, { useContext } from 'react'
+import { NextUIProvider } from "@nextui-org/react";
 
 function page() {
   const {isLoggedIn,setIsLoggedIn}=useContext(User)
   console.log(isLoggedIn)
   return (
   
+    <NextUIProvider>
 
     <div className='  overflow-x-hidden'>
       <Navbar/>
@@ -23,6 +25,7 @@ function page() {
       </div>
       <Footer/>
       </div>
+    </NextUIProvider>
   
   )
 }
