@@ -1,4 +1,5 @@
 "use client"
+import Loading from '@/components/Loading'
 import Navbar from '@/components/Navbar'
 import SearchCard from '@/components/SearchCard'
 import { User } from '@/utils/Usercontext'
@@ -103,7 +104,7 @@ function page() {
                         dataLength={searchData.length}
                         next={fetchSearchres}
                         hasMore={true} // Set this to false when there are no more pages
-                        loader={<h4>Loading...</h4>} // Loading indicator
+                        loader={<Loading/>} // Loading indicator
                         endMessage={<p>That's it</p>}
                     >
 
