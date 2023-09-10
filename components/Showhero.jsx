@@ -9,6 +9,9 @@ import axios from 'axios';
 import Footer from './Footer';
 
 function Showhero({ showDets }) {
+    if(!showDets){
+        return <div></div>
+    }
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [youtubeurl,setYouTubeUrl]=useState('')
     var geners=''

@@ -8,6 +8,9 @@ import ReactPlayer from 'react-player'
 import axios from 'axios';
 
 function ShowheroTv({ showDets }) {
+    if(!showDets){
+        return <div></div>
+    }
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const [youtubeurl,setYouTubeUrl]=useState('')
