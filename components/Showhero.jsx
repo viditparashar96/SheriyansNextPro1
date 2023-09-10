@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import { AiOutlineMenu, AiFillHeart, AiFillStar } from 'react-icons/ai'

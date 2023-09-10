@@ -1,3 +1,4 @@
+"use client"
 import React,{useState,useEffect} from 'react'
 import { AiOutlineMenu, AiFillHeart, AiFillStar } from 'react-icons/ai'
 import { BsFillBookmarkFill, BsFillPlayFill } from 'react-icons/bs'
