@@ -1,4 +1,5 @@
 "use client"
+import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -80,6 +81,7 @@ function signup() {
         </form>
         </div>
         </div>
+        <Footer/>
     </div>
   )
 }

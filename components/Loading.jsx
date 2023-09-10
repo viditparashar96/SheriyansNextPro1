@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import {CircularProgress} from "@nextui-org/react";
 
-function Loading() {
+export default function Loading() {
   return (
-    <div>Loading.....</div>
-  )
-}
+    <div className="w-[100%] h-[100vh] flex items-center justify-center">
 
-export default Loading
+      <CircularProgress color="primary" label="Loading..." />
+    </div>
+  );
+}

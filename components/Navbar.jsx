@@ -31,7 +31,7 @@ function Navbar() {
         
     },[menu])
     return (
-        <div className=' relative'>
+        <div className=' relative z-40'>
 
        
          <div className={`overlay  absolute  w-[35vh] top-0   ${menu?"right-0":"-right-[100%]"}  transition-all ease-in-out  duration-700 h-[100vh] z-30 bg-[#032541f8]`}>
@@ -65,7 +65,7 @@ function Navbar() {
             <div className='w-full md:px-0  md:w-7/12 mx-auto  flex items-center justify-between px-6'>
                 <div className='flex space-x-4'>
                     <div className='flex items-center'>
-                        <Link href="/"> <img src={logo} alt="logo" /></Link>
+                        <Link href="/"> <img src="https://o.remove.bg/downloads/1a35be52-227b-43e7-8866-ec76d3daca5e/images-removebg-preview.png" width={140} alt="logo" /></Link>
                     </div>
                     <div className=' flex space-x-3 items-center'>
                         <div className='relative  py-4 movies'>
@@ -74,19 +74,19 @@ function Navbar() {
                             <div className='movieslink absolute min-w-[140px] py-3 px-4 left-0 bg-white text-black rounded-sm flex flex-col gap-5 shadow-lg'>
                                 <div className='w-full  p-1 hover:bg-slate-100 transition-all'>
 
-                                    <Link href="#">Popular</Link>
+                                    <Link href="/popularmovies">Popular</Link>
                                 </div>
                                 <div className='w-full p-2'>
 
-                                    <Link href="#">Now playing</Link>
+                                    <Link href="/nowplaying">Now playing</Link>
                                 </div>
                                 <div className='w-full  p-2'>
 
-                                    <Link href="#">Upcoming</Link>
+                                    <Link href="/upcomingmovies">Upcoming</Link>
                                 </div>
                                 <div className='w-full p-2'>
 
-                                    <Link href="#">Top Rated</Link>
+                                    <Link href="/topratedmovies">Top Rated</Link>
                                 </div>
 
 
@@ -98,19 +98,19 @@ function Navbar() {
                             <div className='tvshowslink absolute min-w-[140px] py-3 px-4 left-0  bg-white text-black rounded-sm  flex flex-col gap-5  shadow-lg'>
                                 <div className='w-full  p-1'>
 
-                                    <Link href="#">Popular</Link>
+                                    <Link href="/populartv">Popular</Link>
                                 </div>
                                 <div className='w-full p-2'>
 
-                                    <Link href="#">Aring Today</Link>
+                                    <Link href="/airingtoday">Aring Today</Link>
                                 </div>
                                 <div className='w-full  p-2'>
 
-                                    <Link href="#">On Tv</Link>
+                                    <Link href="ontv">On Tv</Link>
                                 </div>
                                 <div className='w-full p-2'>
 
-                                    <Link href="#">Top Rated</Link>
+                                    <Link href="/topratedtv">Top Rated</Link>
                                 </div>
 
 

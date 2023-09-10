@@ -2,6 +2,7 @@
 import Navbar from '@/components/Navbar'
 import SearchCard from '@/components/SearchCard'
 import { User } from '@/utils/Usercontext'
+import { Button } from '@nextui-org/react'
 import axios from 'axios'
 import Link from 'next/link'
 import React, { useContext, useEffect, useState } from 'react'
@@ -89,6 +90,7 @@ function page() {
                             <Link href="#" className='font-semibold'>Networks</Link>
                             <div>
                                 <h1>01</h1>
+
                             </div>
                         </div>
 
@@ -97,20 +99,17 @@ function page() {
                 </div>
                 <div className='searchres  w-[80%] h-fit relative space-y-6 '>
                     <InfiniteScroll
+                    className=' space-y-4'
                         dataLength={searchData.length}
                         next={fetchSearchres}
                         hasMore={true} // Set this to false when there are no more pages
                         loader={<h4>Loading...</h4>} // Loading indicator
-                        endMessage={
-                            <p style={{ textAlign: 'center' }}>
-                              <b>Yay! You have seen it all</b>
-                            </p>
-                          }
+                        endMessage={<p>That's it</p>}
                     >
 
                         {
                             searchData.map(function (eachData) {
-                                return <div className='ml-8 border' key={eachData.id}><SearchCard {...eachData} key={eachData.id} /></div>
+                                return <div className='ml-8 border space-y-3' key={eachData.id}><SearchCard {...eachData} key={eachData.id} /></div>
                             })
                         }
 
@@ -119,9 +118,7 @@ function page() {
 
 
 
-                    <div className='pagination w-full h-[60px]  flex'>
-                        pages
-                    </div>
+                    
                 </div>
             </div>
         </div>

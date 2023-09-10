@@ -1,5 +1,7 @@
+"use client"
 import Usercontext from '@/utils/Usercontext'
 import './globals.css'
+import { NextUIProvider } from "@nextui-org/react";
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,10 +12,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-        <Usercontext>
-          {children}
-        </Usercontext>
-        </body>
+
+        <NextUIProvider>
+          
+            <Usercontext>
+              {children}
+            </Usercontext>
+        
+        </NextUIProvider>
+
+      </body>
     </html>
   )
 }
